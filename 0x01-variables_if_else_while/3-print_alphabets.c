@@ -1,14 +1,16 @@
 #include <stdio.h>
 #include <ctype.h>
+
 /**
  * main - Entry point
  *
- * Return: Always 0(success)
-*/
+ * Return: Always 0 (success)
+ */
 int main(void)
-{	
+{
 int lowerCase = 'a';
 int upperCase = 'A';
+
 while (lowerCase <= 'z')
 {
 putchar(lowerCase);
