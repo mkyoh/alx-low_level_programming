@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <ctype.h>
-
 /**
  * main - Entry point
  *
@@ -10,7 +9,6 @@ int main(void)
 {
 int lowerCase = 'a';
 int upperCase = 'A';
-
 while (lowerCase <= 'z')
 {
 putchar(lowerCase);
