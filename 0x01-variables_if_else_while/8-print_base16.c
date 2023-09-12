@@ -1,8 +1,7 @@
 #include <stdio.h>
-#include <ctype.h>
 
 /**
- * main - Entry point
+ * main - print numbers in base 16
  *
  * Return: Always 0 (success)
  */
