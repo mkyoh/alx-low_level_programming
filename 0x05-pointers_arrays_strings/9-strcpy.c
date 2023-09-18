@@ -5,7 +5,7 @@
  * @src: copy from
  * Return: string
 */
-void *_strcpy(char *dest, const char *src)
+char *_strcpy(char *dest, const char *src)
 {
 int l = 0;
 int x = 0;
