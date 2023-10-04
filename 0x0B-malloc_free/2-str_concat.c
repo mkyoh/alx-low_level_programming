@@ -1,5 +1,4 @@
 #include "main.h"
-		
 #include <stdlib.h>
 		
 /**
@@ -13,71 +12,28 @@
  * Return: concat of s1 and s2
 		
  */
-		
-char *str_concat(char *s1, char *s2)
-		
+char *str_concat(const char *s1, const char *s2)
 {
-		
-	char *conct;
-		
-	int i, ci;
-		
+char *result;
+size_t len1, len2, total_len;
+size_t i;
 
-		
-	if (s1 == NULL)
-		
-		s1 = "";
-		
-	if (s2 == NULL)
-		
-		s2 = "";
-		
+if (s1 == NULL)
+s1 = "";
+if (s2 == NULL)
+s2 = "";
 
-		
-		i = ci = 0;
-		
-	while (s1[i] != '\0')
-		
-		i++;
-		
-	while (s2[ci] != '\0')
-		
-		ci++;
-		
-	conct = malloc(sizeof(char) * (i + ci + 1));
-		
+len1 = strlen(s1);
+len2 = strlen(s2);
+total_len = len1 + len2;
+result = (char *)malloc((total_len + 1) * sizeof(char));
+if (result == NULL)
+return NULL;
+for (i = 0; i < len1; i++)
+result[i] = s1[i];
 
-		
-	if (conct == NULL)
-		
-		return (NULL);
-		
-	i = ci = 0;
-		
-	while (s1[i] != '\0')
-		
-	{
-		
-		conct[i] = s1[i];
-		
-		i++;
-		
-	}
-		
-
-		
-	while (s2[ci] != '\0')
-		
-	{
-		
-		conct[i] = s2[ci];
-		
-		i++, ci++;
-		
-	}
-		
-	conct[i] = '\0';
-		
-	return (conct);
-		
+for (i = 0; i < len2; i++)   
+result[len1 + i] = s2[i];
+result[total_len] = '\0';
+return result;
 }
