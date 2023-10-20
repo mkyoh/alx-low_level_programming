@@ -1,7 +1,9 @@
-global main
-estern printf
+global    main
+          extern    printf
 main:
-miov edi, format
-xor ear, eax, 0
-ret
+	 mov   edi, format
+	 xor   eax, eax
+	 call  printf
+	 mov 	eax, 0
+	 ret
 format: db `Hello, Holberton\n`,0
