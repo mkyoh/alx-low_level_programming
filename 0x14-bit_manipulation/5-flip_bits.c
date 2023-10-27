@@ -17,7 +17,7 @@ unsigned long int ex = n ^ m;
 for (k = 63; k >= 0; k--)
 {previous = ex >> k;
 if (previous & 1)
-founder++;
+rounder++;
 }
 return (rounder);
 }
